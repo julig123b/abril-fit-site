@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abril Fit | Entrenadora Personal</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-gO3o+M4WgZp3ttZK10HS96KBKT/g0aI1woMvV7iaOlGPNpjaNw5YeYJoq8lAnV3iO4VMQnPXRRdHUnXvGgHSWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header id="top">
+    <nav class="container">
+      <div class="logo"><a href="#top">Abril<span class="accent">Fit</span></a></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobremi">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger" aria-label="Abrir menú" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <h1>Transformá tu cuerpo</h1>
+      <p>Entrená conmigo para alcanzar tu mejor versión.</p>
+      <a href="#contacto" class="btn btn-cta">¡Empezá ahora!</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí Section -->
+  <section id="sobremi" class="about">
+    <div class="container about-wrapper">
+      <div class="about-text reveal">
+        <h2>Sobre mí</h2>
+        <p>
+          ¡Hola! Soy Abril, entrenadora personal certificada y estudiante apasionada por ayudar a otras personas a transformar su físico y su bienestar.
+        </p>
+        <p>
+          Durante años luché con mi propia transformación. A través de disciplina, constancia y aprendizaje, descubrí los métodos que hoy comparto con mis alumnos. Mi objetivo es guiarte de forma personalizada para que alcances resultados sostenibles y aprendas a disfrutar el proceso.
+        </p>
+        <p>
+          Compartiré mis certificaciones y logros aquí para que puedas conocer mi trayectoria y confiar en que estás en buenas manos.
+        </p>
+      </div>
+      <div class="about-slider reveal">
+        <div class="slider">
+          <div class="slides">
+            <!-- Placeholder para foto Antes -->
+            <div class="slide">
+              <div class="img-placeholder">
+                <span>Foto "Antes"<br><small>Subí tu foto aquí</small></span>
+              </div>
+            </div>
+            <!-- Placeholder para foto Después -->
+            <div class="slide">
+              <div class="img-placeholder">
+                <span>Foto "Después"<br><small>Subí tu foto aquí</small></span>
+              </div>
+            </div>
+          </div>
+          <button class="slide-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <button class="slide-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Section -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2 class="reveal">Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Clases de funcional</h3>
+          <p>Sesiones grupales y dinámicas que combinan fuerza y cardio para mejorar tu condición física de forma integral.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Asesoría 1:1</h3>
+          <p>Entrenamiento y acompañamiento personalizado adaptado a tus objetivos, horarios y nivel de experiencia.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-list-alt"></i></div>
+          <h3>Rutinas</h3>
+          <p>Planes de entrenamiento semanales y mensuales que te permiten mantener la motivación y progresar constantemente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas Section -->
+  <section class="stats">
+    <div class="container">
+      <h2 class="reveal">Mi comunidad</h2>
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <span class="stat-number" data-target="100">0</span>
+          <p>Clientes satisfechos</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number" data-target="5">0</span>
+          <p>Años de experiencia</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number" data-target="80">0%</span>
+          <p>Tasa de adherencia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Test Section -->
+  <section class="test">
+    <div class="container test-wrapper">
+      <h2 class="reveal">Test de Objetivos</h2>
+      <p class="test-intro reveal">Respondé las preguntas para descubrir qué servicio se adapta mejor a tus necesidades.</p>
+      <div class="test-steps reveal">
+        <!-- Paso 1 -->
+        <div class="test-step active" data-step="1">
+          <p>¿Cuál es tu objetivo principal?</p>
+          <div class="test-options">
+            <button type="button" data-value="perder">Perder peso</button>
+            <button type="button" data-value="ganar">Ganar músculo</button>
+            <button type="button" data-value="mejorar">Mejorar condición</button>
+          </div>
+        </div>
+        <!-- Paso 2 -->
+        <div class="test-step" data-step="2">
+          <p>¿Cuántos días por semana podés entrenar?</p>
+          <div class="test-options">
+            <button type="button" data-value="1-2">1–2 días</button>
+            <button type="button" data-value="3-4">3–4 días</button>
+            <button type="button" data-value="5+">5 o más días</button>
+          </div>
+        </div>
+        <!-- Resultado -->
+        <div class="test-result" data-step="3">
+          <p>Según tus respuestas te recomendamos:</p>
+          <div class="result-text"></div>
+          <a href="#contacto" class="btn">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificaciones Section -->
+  <section id="certificaciones" class="certs">
+    <div class="container">
+      <h2 class="reveal">Certificaciones</h2>
+      <div class="certs-list">
+        <div class="cert-item reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <h4>Entrenadora Personal</h4>
+            <p>Certificada por la Asociación Internacional de Entrenadores Personales.</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <i class="fas fa-running"></i>
+          <div>
+            <h4>Especialista en Funcional</h4>
+            <p>Formación avanzada en entrenamiento funcional y de fuerza.</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <i class="fas fa-apple-alt"></i>
+          <div>
+            <h4>Nutr coach</h4>
+            <p>Cursos de nutrición deportiva para complementar el entrenamiento.</p>
+          </div>
+        </div>
+        <!-- Añade más certificaciones aquí si lo deseas -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / Preguntas Frecuentes Section -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="reveal">Preguntas Frecuentes</h2>
+      <div class="faq-item reveal">
+        <button class="faq-question">01 ¿Necesito experiencia previa?</button>
+        <div class="faq-answer">
+          No necesitas experiencia previa. Adaptamos los entrenamientos a tu nivel, desde principiante hasta avanzado.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">02 ¿Incluye planes de alimentación?</button>
+        <div class="faq-answer">
+          Los planes de nutrición se ofrecen como complemento opcional y son personalizados según tus necesidades.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">03 ¿Puedo entrenar desde casa?</button>
+        <div class="faq-answer">
+          Sí, muchas rutinas están diseñadas para hacer desde casa con poco o ningún equipamiento.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">04 ¿Cómo reservo una clase?</button>
+        <div class="faq-answer">
+          Podés contactarme por WhatsApp o completar el formulario a continuación para reservar tu clase.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="reveal">Contacto</h2>
+      <p class="reveal">¿Listo/a para empezar tu transformación? Escribime o completá el formulario y me pondré en contacto contigo.</p>
+      <div class="contact-content">
+        <div class="contact-info reveal">
+          <p><i class="fas fa-phone"></i> <a href="https://wa.me/5491130649946" target="_blank" rel="noopener noreferrer">+54 9 11 3064 9946</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+            <p class="form-message"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Abril Fit. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="whatsapp-floating">
+    <a href="https://wa.me/5491130649946?text=Hola%20Abril,%20me%20gustaría%20comenzar%20mi%20entrenamiento" target="_blank" aria-label="Chatear por WhatsApp">
+      <!-- Usamos el archivo svg local para el icono -->
+      <img src="whatsapp.svg" alt="WhatsApp">
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
