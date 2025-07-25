@@ -17,7 +17,9 @@
   <!-- Header / Navigation -->
   <header id="top">
     <nav class="container">
-      <div class="logo"><a href="#top">Abril<span class="accent">Fit</span></a></div>
+      <!-- Logo actualizado: se utiliza mayúsculas para mayor presencia y se separan las
+           partes del nombre para poder aplicar estilos independientes desde CSS -->
+      <div class="logo"><a href="#top"><span class="logo-main">ABRIL</span><span class="accent">FIT</span></a></div>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobremi">Sobre mí</a></li>
@@ -37,8 +39,11 @@
   <section id="inicio" class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content reveal">
-      <h1>Transformá tu cuerpo</h1>
-      <p>Entrená conmigo para alcanzar tu mejor versión.</p>
+      <!-- Frase principal destacando la transformación. La palabra "TRANSFORMÁ" tiene
+           un span para aplicarle estilos diferentes (cursiva, color, etc.) desde CSS. -->
+      <h1><span class="highlight">TRANSFORMÁ</span> TU CUERPO</h1>
+      <!-- Mensaje secundario actualizado para reflejar el acompañamiento en cada paso -->
+      <p>Conseguí resultados reales con un acompañamiento que te impulsa en cada paso.</p>
       <a href="#contacto" class="btn btn-cta">¡Empezá ahora!</a>
     </div>
   </section>
@@ -47,31 +52,42 @@
   <section id="sobremi" class="about">
     <div class="container about-wrapper">
       <div class="about-text reveal">
-        <h2>Sobre mí</h2>
+        <!-- Título de la sección en mayúsculas para mayor impacto -->
+        <h2>SOBRE MÍ</h2>
+        <!-- Texto actualizado de presentación. Cada párrafo describe mi historia y filosofía de trabajo. -->
         <p>
-          ¡Hola! Soy Abril, entrenadora personal certificada y estudiante apasionada por ayudar a otras personas a transformar su físico y su bienestar.
+          ¡Hola! soy Abril entrenadora certificada, apasionada por el entrenamiento y por ayudar a otros a transformar su cuerpo y bienestar.
         </p>
         <p>
-          Durante años luché con mi propia transformación. A través de disciplina, constancia y aprendizaje, descubrí los métodos que hoy comparto con mis alumnos. Mi objetivo es guiarte de forma personalizada para que alcances resultados sostenibles y aprendas a disfrutar el proceso.
+          Durante años luché con mi propia transformación&nbsp;: siempre fui muy delgada, con metabolismo rápido, y quería ganar masa muscular. No fue fácil, pero con el tiempo descubrí lo que funciona, lo que no, y sobre todo: lo importante que es sentirse acompañada en el proceso.
         </p>
         <p>
-          Compartiré mis certificaciones y logros aquí para que puedas conocer mi trayectoria y confiar en que estás en buenas manos.
+          Hoy me dedico a ayudar a otras personas a transformar su físico con rutinas pensadas 100% para cada objetivo. Sin fórmulas mágicas, sin presión, con constancia y un enfoque realista.
+        </p>
+        <p>
+          Entrenar no tiene que ser un castigo, ni una moda. Tiene que ser un proceso que disfrutes, que entiendas, y que te haga sentir fuerte de verdad (por dentro y por fuera).
+        </p>
+        <p>
+          Acá vas a encontrar mi forma de trabajar, mis certificaciones, y todo lo que hago con el corazón para que te sientas segura y motivada desde el día uno.
         </p>
       </div>
       <div class="about-slider reveal">
         <div class="slider">
           <div class="slides">
-            <!-- Placeholder para foto Antes -->
+            <!-- Slide para la foto "Antes".  La imagen definitiva se podrá sustituir.
+                 Se incluye una capa con texto difuminado para identificar la foto. -->
             <div class="slide">
               <div class="img-placeholder">
-                <span>Foto "Antes"<br><small>Subí tu foto aquí</small></span>
+                <span>Subí tu foto aquí</span>
               </div>
+              <div class="img-overlay">ANTES</div>
             </div>
-            <!-- Placeholder para foto Después -->
+            <!-- Slide para la foto "Después" -->
             <div class="slide">
               <div class="img-placeholder">
-                <span>Foto "Después"<br><small>Subí tu foto aquí</small></span>
+                <span>Subí tu foto aquí</span>
               </div>
+              <div class="img-overlay">DESPUÉS</div>
             </div>
           </div>
           <button class="slide-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
@@ -84,22 +100,49 @@
   <!-- Servicios Section -->
   <section id="servicios" class="services">
     <div class="container">
-      <h2 class="reveal">Servicios</h2>
+      <!-- Título en mayúsculas para mejorar la jerarquía visual -->
+      <h2 class="reveal">SERVICIOS</h2>
       <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
-          <h3>Clases de funcional</h3>
-          <p>Sesiones grupales y dinámicas que combinan fuerza y cardio para mejorar tu condición física de forma integral.</p>
+        <!-- Tarjeta con efecto flip para Clases de Funcional -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <!-- Cara frontal con información -->
+            <div class="flip-card-front">
+              <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+              <h3>Clases de Funcional</h3>
+              <p>Sesiones grupales presenciales y dinámicas que combinan fuerza y cardio para mejorar tu condición física de forma integral.</p>
+            </div>
+            <!-- Cara trasera con imagen o mensaje -->
+            <div class="flip-card-back">
+              <span>Imagen aquí</span>
+            </div>
+          </div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i class="fas fa-user-check"></i></div>
-          <h3>Asesoría 1:1</h3>
-          <p>Entrenamiento y acompañamiento personalizado adaptado a tus objetivos, horarios y nivel de experiencia.</p>
+        <!-- Tarjeta con efecto flip para Asesoría 1:1 -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="service-icon"><i class="fas fa-user-check"></i></div>
+              <h3>Asesoría 1:1</h3>
+              <p>Entrenamiento y acompañamiento personalizado adaptado a tus objetivos, horarios y nivel de experiencia.</p>
+            </div>
+            <div class="flip-card-back">
+              <span>Imagen aquí</span>
+            </div>
+          </div>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i class="fas fa-list-alt"></i></div>
-          <h3>Rutinas</h3>
-          <p>Planes de entrenamiento semanales y mensuales que te permiten mantener la motivación y progresar constantemente.</p>
+        <!-- Tarjeta con efecto flip para Rutinas -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="service-icon"><i class="fas fa-list-alt"></i></div>
+              <h3>Rutinas</h3>
+              <p>Planes de entrenamiento semanales y mensuales que te permiten mantener la motivación y progresar constantemente.</p>
+            </div>
+            <div class="flip-card-back">
+              <span>Imagen aquí</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -163,30 +206,21 @@
   <!-- Certificaciones Section -->
   <section id="certificaciones" class="certs">
     <div class="container">
-      <h2 class="reveal">Certificaciones</h2>
+      <!-- Título en mayúsculas para mantener consistencia -->
+      <h2 class="reveal">CERTIFICACIONES</h2>
       <div class="certs-list">
-        <div class="cert-item reveal">
-          <i class="fas fa-certificate"></i>
-          <div>
-            <h4>Entrenadora Personal</h4>
-            <p>Certificada por la Asociación Internacional de Entrenadores Personales.</p>
+        <!-- Única certificación destacada -->
+        <div class="cert-item reveal single-cert">
+          <div class="cert-info">
+            <h4>Entrenadora Personal Internacional</h4>
+            <p>Recibida en la IFBB – Matrícula Nº&nbsp;56888.</p>
+            <p class="small-note">Me sigo capacitando constantemente y respaldo mi trabajo en evidencia científica.</p>
+          </div>
+          <!-- Imagen del título como referencia; podés reemplazarla por tu certificado real -->
+          <div class="cert-image">
+            <img src="about_after.jpg" alt="Certificado IFBB">
           </div>
         </div>
-        <div class="cert-item reveal">
-          <i class="fas fa-running"></i>
-          <div>
-            <h4>Especialista en Funcional</h4>
-            <p>Formación avanzada en entrenamiento funcional y de fuerza.</p>
-          </div>
-        </div>
-        <div class="cert-item reveal">
-          <i class="fas fa-apple-alt"></i>
-          <div>
-            <h4>Nutr coach</h4>
-            <p>Cursos de nutrición deportiva para complementar el entrenamiento.</p>
-          </div>
-        </div>
-        <!-- Añade más certificaciones aquí si lo deseas -->
       </div>
     </div>
   </section>
@@ -194,7 +228,8 @@
   <!-- FAQ / Preguntas Frecuentes Section -->
   <section class="faq">
     <div class="container">
-      <h2 class="reveal">Preguntas Frecuentes</h2>
+      <!-- Título de la sección en mayúsculas para coherencia visual -->
+      <h2 class="reveal">PREGUNTAS FRECUENTES</h2>
       <div class="faq-item reveal">
         <button class="faq-question">01 ¿Necesito experiencia previa?</button>
         <div class="faq-answer">
@@ -230,7 +265,7 @@
       <div class="contact-content">
         <div class="contact-info reveal">
           <p><i class="fas fa-phone"></i> <a href="https://wa.me/5491130649946" target="_blank" rel="noopener noreferrer">+54 9 11 3064 9946</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:byabrilfit@gmail.com">byabrilfit@gmail.com</a></p>
           <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
         </div>
         <div class="contact-form-wrapper reveal">
