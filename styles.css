@@ -161,7 +161,11 @@ nav {
   /* Fondo del hero: se utiliza la foto de Abril caminando para
    * personalizar el inicio. La imagen se centra y se recorta para
    * adaptarse a la sección. */
-  background: url('hero-user.jpg') center/cover no-repeat;
+  /* Utilizamos la nueva foto de Abril en el espejo y la alineamos a la derecha para
+   * que la figura quede en ese lado, permitiendo que el texto se vea claramente
+   * a la izquierda. Ajustamos la posición a "right center" para enfocarnos
+   * en el cuerpo completo y recortamos con "cover" para llenar toda la sección. */
+  background: url('hero-user.jpg') right center/cover no-repeat;
 
   /* Añadimos una pseudo-elemento para mostrar texto en gran tamaño
    * de forma vertical, inspirado en los diseños de referencia. Este
@@ -179,7 +183,9 @@ nav {
   transform: rotate(-90deg);
   font-size: 10rem;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.05);
+  /* Ajustamos la transparencia del texto decorativo para que no compita con la
+   * imagen principal y el contenido. */
+  color: rgba(255, 255, 255, 0.03);
   pointer-events: none;
   z-index: 0;
   position: relative;
@@ -206,7 +212,8 @@ nav {
 }
 
 .hero-content h1 {
-  font-size: 3.8rem;
+  /* Se aumenta el tamaño para dar más presencia al título en la sección de inicio */
+  font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 1rem;
   color: var(--color-accent);
@@ -244,8 +251,12 @@ nav {
   transform: translateY(-3px);
 }
 
+/* Ajustes para el botón principal en el héroe: tamaño de texto mayor,
+ * relleno generoso y sombra ligera para destacar como acción principal */
 .btn-cta {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* About section */
