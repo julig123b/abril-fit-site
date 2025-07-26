@@ -174,6 +174,64 @@ nav {
   position: relative;
 }
 
+/* Contenedor de diapositivas del hero. Se posiciona detrás de la superposición y del contenido */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Cada diapositiva ocupa todo el área del hero y se desvanece mediante la propiedad opacity */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* La diapositiva activa es visible */
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Controles de navegación del carrusel */
+.hero-nav {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 3;
+}
+
+.hero-nav button {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero-nav button:hover {
+  background: var(--color-accent);
+  color: #000;
+}
+
 /* Texto vertical decorativo en el hero */
 .hero::before {
   content: 'ABRIL FIT';
@@ -202,12 +260,14 @@ nav {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
-  z-index: 0;
+  /* La superposición se coloca encima del carrusel pero debajo del contenido */
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  /* El contenido del hero aparece por encima de la superposición y el carrusel */
+  z-index: 2;
   max-width: 800px;
 }
 

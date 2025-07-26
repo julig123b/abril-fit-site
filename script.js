@@ -181,4 +181,44 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  /*
+   * Carrusel del hero
+   * Permite alternar entre varias imágenes de fondo en la sección de inicio,
+   * inspirado en las referencias proporcionadas. Las diapositivas se van
+   * mostrando una a la vez mediante la clase "active" y el usuario puede
+   * navegar con los botones prev/next o dejar que avancen automáticamente.
+   */
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroPrev = document.querySelector('.slider-prev');
+  const heroNext = document.querySelector('.slider-next');
+  let heroIndex = 0;
+
+  function showHeroSlide(index) {
+    heroSlides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+  }
+
+  if (heroSlides.length && heroPrev && heroNext) {
+    heroPrev.addEventListener('click', () => {
+      heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    });
+
+    heroNext.addEventListener('click', () => {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    });
+
+    // Avance automático de las diapositivas
+    setInterval(() => {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    }, 7000);
+  }
 });

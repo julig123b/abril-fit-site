@@ -35,16 +35,27 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section con carrusel de imágenes -->
   <section id="inicio" class="hero">
+    <!-- Contenedor de diapositivas. Cada diapositiva utiliza una imagen de fondo.
+         La clase "active" indica la diapositiva visible. -->
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background-image: url('hero-slide1.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('hero-slide2.jpg');"></div>
+    </div>
+    <!-- Capa de superposición oscura para que las imágenes no se vean pixeladas y
+         se mejore la legibilidad del texto. -->
     <div class="hero-overlay"></div>
+    <!-- Contenido principal del hero: título, descripción y llamado a la acción -->
     <div class="container hero-content reveal">
-      <!-- Frase principal destacando la transformación. La palabra "TRANSFORMÁ" tiene
-           un span para aplicarle estilos diferentes (cursiva, color, etc.) desde CSS. -->
       <h1><span class="highlight">TRANSFORMÁ</span> TU CUERPO</h1>
-      <!-- Mensaje secundario actualizado para reflejar el acompañamiento en cada paso -->
       <p>Conseguí resultados reales con un acompañamiento que te impulsa en cada paso.</p>
       <a href="#contacto" class="btn btn-cta">¡Empezá ahora!</a>
+    </div>
+    <!-- Controles de navegación del carrusel -->
+    <div class="hero-nav">
+      <button class="slider-prev" aria-label="Anterior">&#10094;</button>
+      <button class="slider-next" aria-label="Siguiente">&#10095;</button>
     </div>
   </section>
 
