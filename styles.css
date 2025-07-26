@@ -156,80 +156,26 @@ nav {
 }
 
 /* Hero section */
+/* Hero section reimaginado
+ * El hero ya no utiliza una imagen de fondo a pantalla completa para evitar pixelación.
+ * Se establece una altura mínima y se aplica un fondo oscuro sólido. El contenido se
+ * distribuye en dos columnas: texto a la izquierda y un carrusel reducido a la derecha. */
 .hero {
-  height: 100vh;
-  /* Fondo del hero: se utiliza la foto de Abril caminando para
-   * personalizar el inicio. La imagen se centra y se recorta para
-   * adaptarse a la sección. */
-  /* Utilizamos la nueva foto de Abril en el espejo y la alineamos a la derecha para
-   * que la figura quede en ese lado, permitiendo que el texto se vea claramente
-   * a la izquierda. Ajustamos la posición a "right center" para enfocarnos
-   * en el cuerpo completo y recortamos con "cover" para llenar toda la sección. */
-  background: url('hero-user.jpg') right center/cover no-repeat;
-
-  /* Añadimos una pseudo-elemento para mostrar texto en gran tamaño
-   * de forma vertical, inspirado en los diseños de referencia. Este
-   * texto actúa como marca de agua decorativa y no interfiere con el
-   * contenido principal. */
   position: relative;
-}
-
-/* Contenedor de diapositivas del hero. Se posiciona detrás de la superposición y del contenido */
-.hero-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-/* Cada diapositiva ocupa todo el área del hero y se desvanece mediante la propiedad opacity */
-.hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-/* La diapositiva activa es visible */
-.hero-slide.active {
-  opacity: 1;
-}
-
-/* Controles de navegación del carrusel */
-.hero-nav {
-  position: absolute;
-  bottom: 18%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 1rem;
-  z-index: 3;
+  align-items: center;
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  background-color: var(--color-dark);
+  overflow: hidden;
 }
 
-.hero-nav button {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.hero-nav button:hover {
-  background: var(--color-accent);
-  color: #000;
+/* Las antiguas clases de carrusel a pantalla completa se eliminan o se ocultan para
+ * dar paso a un carrusel reducido dentro del héroe. */
+.hero-slider,
+.hero-slide,
+.hero-nav {
+  display: none;
 }
 
 /* Texto vertical decorativo en el hero */
@@ -269,6 +215,79 @@ nav {
   /* El contenido del hero aparece por encima de la superposición y el carrusel */
   z-index: 2;
   max-width: 800px;
+}
+
+/* Nuevo layout para el hero con carrusel reducido */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Columna de texto en el héroe */
+.hero-text {
+  flex: 1 1 55%;
+  max-width: 600px;
+}
+
+/* Galería de imágenes estilo carrusel dentro del héroe */
+.hero-gallery {
+  flex: 1 1 40%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-gallery .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.hero-gallery .gallery-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.hero-gallery .gallery-image:last-child {
+  margin-right: 0;
+}
+
+.hero-gallery .carousel-nav {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.hero-gallery .carousel-nav button {
+  background: var(--color-accent);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #000;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-gallery .carousel-nav button:hover {
+  background: #e6b500;
 }
 
 .hero-content h1 {

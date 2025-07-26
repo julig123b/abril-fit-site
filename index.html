@@ -35,27 +35,29 @@
     </nav>
   </header>
 
-  <!-- Hero Section con carrusel de imágenes -->
+  <!-- Hero Section con carrusel reducido -->
   <section id="inicio" class="hero">
-    <!-- Contenedor de diapositivas. Cada diapositiva utiliza una imagen de fondo.
-         La clase "active" indica la diapositiva visible. -->
-    <div class="hero-slider">
-      <div class="hero-slide active" style="background-image: url('hero-slide1.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('hero-slide2.jpg');"></div>
-    </div>
-    <!-- Capa de superposición oscura para que las imágenes no se vean pixeladas y
-         se mejore la legibilidad del texto. -->
+    <!-- Capa de superposición oscura para mejorar la legibilidad del texto sobre el fondo negro -->
     <div class="hero-overlay"></div>
-    <!-- Contenido principal del hero: título, descripción y llamado a la acción -->
-    <div class="container hero-content reveal">
-      <h1><span class="highlight">TRANSFORMÁ</span> TU CUERPO</h1>
-      <p>Conseguí resultados reales con un acompañamiento que te impulsa en cada paso.</p>
-      <a href="#contacto" class="btn btn-cta">¡Empezá ahora!</a>
-    </div>
-    <!-- Controles de navegación del carrusel -->
-    <div class="hero-nav">
-      <button class="slider-prev" aria-label="Anterior">&#10094;</button>
-      <button class="slider-next" aria-label="Siguiente">&#10095;</button>
+    <div class="container hero-inner">
+      <!-- Columna de texto: título, descripción y llamado a la acción -->
+      <div class="hero-text reveal">
+        <h1><span class="highlight">TRANSFORMÁ</span> TU CUERPO</h1>
+        <p>Conseguí resultados reales con un acompañamiento que te impulsa en cada paso.</p>
+        <a href="#contacto" class="btn btn-cta">¡Empezá ahora!</a>
+      </div>
+      <!-- Galería de imágenes en formato carrusel pequeño. Las imágenes se mostrarán sobre un fondo negro
+           y se podrán navegar mediante los botones de anterior/siguiente. -->
+      <div class="hero-gallery reveal">
+        <div class="carousel-track">
+          <img src="hero-slide1.jpg" alt="Entrenamiento" class="gallery-image">
+          <img src="hero-slide2.jpg" alt="Entrenamiento" class="gallery-image">
+        </div>
+        <div class="carousel-nav">
+          <button class="gallery-prev" aria-label="Anterior">&#10094;</button>
+          <button class="gallery-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -229,7 +231,7 @@
           </div>
           <!-- Imagen del título como referencia; podés reemplazarla por tu certificado real -->
           <div class="cert-image">
-            <img src="about_after.jpg" alt="Certificado IFBB">
+            <img src="certificate.jpg" alt="Certificado IFBB">
           </div>
         </div>
       </div>

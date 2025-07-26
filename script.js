@@ -183,42 +183,37 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /*
-   * Carrusel del hero
-   * Permite alternar entre varias imágenes de fondo en la sección de inicio,
-   * inspirado en las referencias proporcionadas. Las diapositivas se van
-   * mostrando una a la vez mediante la clase "active" y el usuario puede
-   * navegar con los botones prev/next o dejar que avancen automáticamente.
+   * Carrusel reducido en el héroe
+   * En esta versión el carrusel se muestra en un contenedor pequeño en el lado derecho
+   * del hero. Las imágenes se deslizan horizontalmente y el usuario puede
+   * navegar con los botones de anterior y siguiente. No se cambia automáticamente.
    */
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  const heroPrev = document.querySelector('.slider-prev');
-  const heroNext = document.querySelector('.slider-next');
-  let heroIndex = 0;
+  const galleryTrack = document.querySelector('.hero-gallery .carousel-track');
+  const galleryImages = document.querySelectorAll('.hero-gallery .gallery-image');
+  const galleryPrev = document.querySelector('.hero-gallery .gallery-prev');
+  const galleryNext = document.querySelector('.hero-gallery .gallery-next');
+  let galleryIndex = 0;
 
-  function showHeroSlide(index) {
-    heroSlides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
-    });
+  function showGallerySlide(idx) {
+    if (!galleryImages.length) return;
+    // calcular el ancho de una imagen incluyendo margen derecho
+    const style = window.getComputedStyle(galleryImages[0]);
+    const marginRight = parseFloat(style.marginRight);
+    const slideWidth = galleryImages[0].offsetWidth + marginRight;
+    galleryTrack.style.transform = `translateX(-${idx * slideWidth}px)`;
   }
 
-  if (heroSlides.length && heroPrev && heroNext) {
-    heroPrev.addEventListener('click', () => {
-      heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
-      showHeroSlide(heroIndex);
+  if (galleryImages.length && galleryPrev && galleryNext) {
+    galleryPrev.addEventListener('click', () => {
+      galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+      showGallerySlide(galleryIndex);
     });
-
-    heroNext.addEventListener('click', () => {
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      showHeroSlide(heroIndex);
+    galleryNext.addEventListener('click', () => {
+      galleryIndex = (galleryIndex + 1) % galleryImages.length;
+      showGallerySlide(galleryIndex);
     });
-
-    // Avance automático de las diapositivas
-    setInterval(() => {
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      showHeroSlide(heroIndex);
-    }, 7000);
+    // Ajustar tamaño inicial
+    window.addEventListener('resize', () => showGallerySlide(galleryIndex));
+    showGallerySlide(galleryIndex);
   }
 });
