@@ -1,0 +1,291 @@
+/*
+ * Estilos para la nueva versión de Abril Fit.
+ * Inspirados en los ejemplos proporcionados, con un enfoque minimalista y
+ * elegante usando una paleta cálida de marrones y cremas.
+ */
+
+:root {
+  --dark: #291C0E;       /* Fondo principal oscuro */
+  --brown: #6E473B;      /* Secciones y sombras */
+  --tan: #A78D78;        /* Acento principal */
+  --light: #BEB5A9;      /* Texto secundario */
+  --cream: #E1D4C2;      /* Texto principal */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark);
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(41, 28, 14, 0.95);
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--cream);
+}
+.logo span {
+  color: var(--tan);
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: var(--tan);
+}
+
+/* Botón hamburguesa para móviles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--cream);
+  border-radius: 2px;
+}
+
+/* Navegación responsiva */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(41, 28, 14, 0.95);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .nav-links.open {
+    max-height: 300px;
+  }
+  .nav-links a {
+    padding: 0.8rem 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Sección héroe */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--cream);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(41, 28, 14, 0.8), rgba(110, 71, 59, 0.6));
+}
+.hero-content {
+  position: relative;
+  max-width: 650px;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.hero-content h1 span {
+  color: var(--tan);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+}
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-primary {
+  background: var(--tan);
+  color: var(--dark);
+}
+.btn-primary:hover {
+  background: var(--cream);
+  color: var(--dark);
+}
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--tan);
+  color: var(--tan);
+}
+.btn-secondary:hover {
+  background: var(--tan);
+  color: var(--dark);
+}
+
+/* Sección programas */
+.programas-section {
+  padding: 5rem 0;
+  background: var(--brown);
+}
+.programas-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--tan);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: var(--dark);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--tan);
+}
+.card p {
+  font-size: 0.95rem;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--brown);
+}
+
+/* Sobre mí */
+.sobremi-section {
+  padding: 5rem 0;
+  background: var(--dark);
+}
+.sobremi-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sobremi-text {
+  flex: 1;
+}
+.sobremi-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--tan);
+}
+.sobremi-text p {
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+.sobremi-photo {
+  flex: 1;
+  text-align: center;
+}
+.sobremi-photo img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+/* Contacto */
+.contacto-section {
+  padding: 5rem 0;
+  background: var(--brown);
+  text-align: center;
+}
+.contacto-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--tan);
+}
+.contacto-section p {
+  margin-bottom: 0.8rem;
+  color: var(--light);
+  font-size: 1rem;
+}
+.contacto-section a {
+  color: var(--tan);
+  text-decoration: underline;
+}
+.contacto-section a:hover {
+  color: var(--cream);
+}
+
+/* Pie de página */
+.footer {
+  background: var(--dark);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--light);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
